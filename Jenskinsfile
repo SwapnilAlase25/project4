@@ -1,0 +1,13 @@
+
+node { 
+    stage('Compiling') {
+        echo "compiling swap program"
+        //gcc swap.c -o swap
+    }
+    stage('Testing') {
+            echo "Testing swap program" 
+        }
+    stage('Archiving') {
+             echo "Archiving swap program output" 
+        }
+ }
