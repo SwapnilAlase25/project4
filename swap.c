@@ -1,6 +1,7 @@
 
 #include <stdio.h> 
-  
+#include <stdlib.h>
+ 
 void swap(int *xp, int *yp) 
 { 
     int temp = *xp; 
@@ -10,9 +11,9 @@ void swap(int *xp, int *yp)
   
 int main(int argc, char** argv) 
 { 
-    int x=argv[1], y=argv[2];
+    int x=atoi(argv[1]), y=atoi(argv[2]);
     printf("\nBefore Swapping: x = %d, y = %d", x, y); 
     swap(&x, &y); 
-    printf("\nAfter Swapping: x = %d, y = %d", x, y); 
+    printf("\nAfter Swapping: x = %d, y = %d\n", x, y); 
     return 0; 
 } 
