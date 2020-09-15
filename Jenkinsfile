@@ -12,8 +12,7 @@ node {
     stage('Testing') {
         echo "Testing swap program" 
         ./swap params.First_Number params.Second_Number 
-    }
-        
+    }        
     /*stage('Archiving') {
              echo "Archiving swap program output" 
         }*/
