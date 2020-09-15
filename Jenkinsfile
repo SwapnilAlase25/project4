@@ -7,7 +7,7 @@ node {
     try{
         stage('Compiling') {
             echo "compiling swap program"
-            gcc --version
+            sh 'gcc --version'
             sh 'pwd'
             sh 'gcc swap.c -o swap'
         }
