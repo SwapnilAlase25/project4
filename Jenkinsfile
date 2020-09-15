@@ -23,7 +23,7 @@ node {
     try{
         stage('Testing') {
             echo "Testing swap program" 
-            sh './swap '${params.FirstNumber}' '${params.SecondNumber}'' 
+            sh './swap "${params.FirstNumber}" "${params.SecondNumber}"' 
         }
      }catch(e){
         echo "Testing stage failed! "
