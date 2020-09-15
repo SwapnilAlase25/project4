@@ -6,12 +6,12 @@ node {
 
     stage('Compiling') {
         echo "compiling swap program"
-        gcc swap.c -o swap
+        sh 'gcc swap.c -o swap'
     }
     
     stage('Testing') {
         echo "Testing swap program" 
-        ./swap params.First_Number params.Second_Number 
+        sh './swap params.First_Number params.Second_Number' 
     }        
     /*stage('Archiving') {
              echo "Archiving swap program output" 
