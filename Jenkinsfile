@@ -9,6 +9,7 @@ node {
             echo "compiling swap program"
             sh 'gcc --version'
             sh 'pwd'
+            sh 'cd /home/alaseswa/.jenkins/workspace/Project4@script'
             sh 'gcc swap.c -o swap'
         }
     }catch(e){
