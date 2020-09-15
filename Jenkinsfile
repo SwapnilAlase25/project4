@@ -1,5 +1,5 @@
 
-properties([parameters([string(defaultValue: '5', description: 'For the swap program, we need 2 numbers', name: 'First_Number', trim: false), string(defaultValue: '10', description: 'For the swap program, we need 2 numbers', name: 'Second_Number', trim: false)]), pipelineTriggers([upstream('seed_repo, '),cron('H * * * *')])])
+properties([parameters([string(defaultValue: '5', description: 'For the swap program, we need 2 numbers', name: 'FirstNumber', trim: false), string(defaultValue: '10', description: 'For the swap program, we need 2 numbers', name: 'SecondNumber', trim: false)]), pipelineTriggers([upstream('seed_repo, '),cron('H * * * *')])])
 def repo_branch = 'master'
 def repo_url = 'https://github.com/SwapnilAlase25/project4.git'
 
@@ -23,7 +23,7 @@ node {
     try{
         stage('Testing') {
             echo "Testing swap program" 
-            sh './swap 2 5' //$params.First_Number $params.Second_Number' 
+            sh './swap ${params.FirstNumber} ${params.SecondNumber}' 
         }
      }catch(e){
         echo "Testing stage failed! "
