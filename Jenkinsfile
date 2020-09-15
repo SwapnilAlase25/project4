@@ -1,5 +1,5 @@
 
-properties([parameters([string(defaultValue: '5', description: 'For the swap program, we need 2 numbers', name: 'First_Number', trim: false), string(defaultValue: '10', description: 'For the swap program, we need 2 numbers', name: 'Second_Number', trim: false)]), pipelineTriggers([upstream('seed_repo, '),cron('H****')])])
+properties([parameters([string(defaultValue: '5', description: 'For the swap program, we need 2 numbers', name: 'First_Number', trim: false), string(defaultValue: '10', description: 'For the swap program, we need 2 numbers', name: 'Second_Number', trim: false)]), pipelineTriggers([upstream('seed_repo, ')])])
 
 
 node { 
