@@ -10,6 +10,7 @@ node {
             sh 'gcc --version'
             sh 'pwd'
             sh 'cd /home/alaseswa/.jenkins/workspace/Project4@script'
+            sh 'ls -l'
             sh 'gcc swap.c -o swap'
         }
     }catch(e){
