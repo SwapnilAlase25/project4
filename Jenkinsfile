@@ -3,6 +3,8 @@ properties([parameters([string(defaultValue: '5', description: 'For the swap pro
 def repo_branch = 'master'
 def repo_url = 'https://github.com/SwapnilAlase25/project4.git'
 def name = 'Tom'
+def one = '50'
+def two = '100'
 
 
 node { 
@@ -26,7 +28,7 @@ node {
     try{
         stage('Testing') {
             echo "Testing swap program" 
-            sh './swap "{params.FirstNumber}" "{params.SecondNumber}"' 
+            sh './swap ${one} ${two}' //{params.SecondNumber}"' 
         }
      }catch(e){
         echo "Testing stage failed! "
