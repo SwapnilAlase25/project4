@@ -41,7 +41,7 @@ node {
         stage('Archiving') {
             echo "Archiving swap program output" 
             sh "./swap ${params.FirstNumber} ${params.SecondNumber} > log.txt" 
-            
+            archiveArtifacts artifacts: 'log.txt', fingerprint: true
             }
      }catch(e){
         echo "Archiving stage failed! "
