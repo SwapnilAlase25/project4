@@ -36,8 +36,8 @@ node {
             sh "./swap ${params.FirstNumber} ${params.SecondNumber}" 
         }
      }catch(e){
-        throw e
-        echo "Testing stage failed! "
+            echo "Testing stage failed! "
+             throw e
     }
     
     try{
@@ -48,6 +48,7 @@ node {
             }
      }catch(e){
         echo "Archiving stage failed! "
+        throw e
     }
     
        
