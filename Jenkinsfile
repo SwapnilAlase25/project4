@@ -46,4 +46,12 @@ node {
      }catch(e){
         echo "Archiving stage failed! "
     }
+    
+     post {
+        success {
+            archiveArtifacts artifacts: 'log.txt'            
+        }
+    }
+    
+    
  }
