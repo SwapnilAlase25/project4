@@ -40,6 +40,7 @@ node {
     try{
         stage('Archiving') {
             echo "Archiving swap program output" 
+            sh "./swap ${params.FirstNumber} ${params.SecondNumber} > log.txt" 
             
             }
      }catch(e){
