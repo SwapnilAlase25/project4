@@ -48,7 +48,7 @@ node {
     }
     
      post {
-        success {
+        always {
             archiveArtifacts artifacts: 'log.txt'            
         }
     }
