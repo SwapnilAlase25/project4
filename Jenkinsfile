@@ -47,11 +47,5 @@ node {
         echo "Archiving stage failed! "
     }
     
-     post {
-        always {
-            archiveArtifacts artifacts: 'log.txt'            
-        }
-    }
-    
-    
+       
  }
