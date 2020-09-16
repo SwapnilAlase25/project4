@@ -32,7 +32,6 @@ node {
     try{
         stage('Testing') {
             echo "Testing swap program"
-            sh 'gcc ---version'
             sh "./swap ${params.FirstNumber} ${params.SecondNumber}" 
         }
      }catch(e){
