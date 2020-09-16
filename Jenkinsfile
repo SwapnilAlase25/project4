@@ -19,7 +19,7 @@ node {
     try{
         stage('Compiling') {
             echo "compiling swap program"
-            sh 'gcc ---version'
+            sh 'gcc --version'
             //sh 'pwd'
             sh "gcc swap.c -o swap"
             //print "Hello ${name}"
@@ -27,16 +27,16 @@ node {
     }catch(e){
         echo "Compiling stage failed! "
         throw e
-    }/*finally{
-        echo "Build failed! "
-    } */  
-    
+    }
+   
     try{
         stage('Testing') {
-            echo "Testing swap program" 
+            echo "Testing swap program"
+            sh 'gcc ---version'
             sh "./swap ${params.FirstNumber} ${params.SecondNumber}" 
         }
      }catch(e){
+        throw e
         echo "Testing stage failed! "
     }
     
