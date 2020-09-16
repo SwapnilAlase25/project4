@@ -21,15 +21,15 @@ node {
             echo "compiling swap program"
             //sh 'gcc --version'
             //sh 'pwd'
-            sh 'gcc swap.c -o swap'
+            sh gcc swap.c -o swap'
             //print "Hello ${name}"
         }
     }catch(e){
         echo "Compiling stage failed! "
         throw e
-    }finally{
+    }/*finally{
         echo "Build failed! "
-    }   
+    } */  
     
     try{
         stage('Testing') {
