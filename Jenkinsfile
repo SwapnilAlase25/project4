@@ -8,13 +8,13 @@ def repo_url = 'https://github.com/SwapnilAlase25/project4.git'
 
 node { 
 
-    try{
+   /* try{
     stage("Get project"){
         git branch: repo_branch, url: repo_url
         }
     }catch(e){
         echo "Get project failed! "
-    }
+    }*/
     
     try{
         stage('Compiling') {
